@@ -47,7 +47,7 @@ header{
     display: flex;
     justify-content: flex-end;
 }
-#button1>a>button{
+#button1>a>div{
     border-style: none;
     background: none;
 }
@@ -65,9 +65,14 @@ header{
     border-style: solid;
     padding: 0px 20px;
     margin-top: 20px;
+    width: fit-content;
 }
 #pdf:hover {
     background-color: #f76767;
+}
+.pdf{
+    text-decoration: none;
+    color:black;
 }
 #logoCampus{
     border-bottom:solid black 1px;
@@ -82,12 +87,12 @@ header{
     width:200px;
     border:black solid 2px;
 }
-a {
+.liens {
     color: #0060B6;
     text-decoration: none;
 }
 
-a:hover {
+.liens:hover {
     color:#00A0C6; 
     text-decoration:none; 
     cursor:pointer;  
@@ -108,6 +113,10 @@ a:hover {
 #scroll{
     scroll-behavior:smooth;
 }
-p{
+p,footer{
     text-align: justify;
+    font-size: 20px;
+}
+h3{
+    font-size:40px;
 }
