@@ -26,7 +26,7 @@
                 <h2>Matéo NICOUD</h2>
             </div>
             <div class="button2 d-flex justify-content-center">
-                <a class="pdf" href="https://pdf-ace.com/pdfme/" target= "_blank" aria-label="Télécharger le pdf">
+                <a class="pdf" href="https://pdf-ace.com/pdfme/" target= "_blank">
                     <div id="pdf">
                         <strong>Télécharger PDF</strong>
                         <svg width="85" height="76" viewBox="0 0 85 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,11 @@
         <main>
             <div id="logoCampus">
                 <h3>Compétences acquises au campus du numérique</h3>
-                <img src="./Images/logo_campusnum_fond-blanc.webp" alt="Logo campus du numérique" width="337">                   
+                <img 
+                srcset="./Images/logo_campusnum_fond-blanc-337.webp 337w, 
+                ./Images/logo_campusnum_fond-blanc-674.webp 674w" 
+                sizes="337px"
+                src="./Images/logo_campusnum_fond-blanc-674.webp" alt="Logo campus du numérique" width="337" height="337">                   
             </div>
             <div class="container">
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 gy-5">
@@ -141,7 +145,7 @@
             <div>
                 <div class="row row-cols-1 row-cols-lg-2 gy-5 gx-5">
                     <div class="col-12 col-lg-4 col-xl-2 text-center">
-                        <img src="./Images/mateo2.webp" alt="Photo de Matéo" class="photoMateo">
+                        <img src="./Images/mateo2.webp" alt="Photo de Matéo" class="photoMateo" width="200" height="308.5">
                     </div>
                     <div class="col-12 col-lg-8 col-xl-10 pt-2">
                         <h3>A propos de moi</h3>
@@ -194,7 +198,14 @@
                 </div>
             </div>
             <div class="d-flex flex-column align-items-center">
-                <img src="./Images/209453912.webp" alt="Ilustration DevOps" class=" img-fluid illu" width="1080">
+                <img srcset="
+                ./Images/209453912-256.webp 256w, 
+                ./Images/209453912-660.webp 660w, 
+                ./Images/209453912-900.webp 900w
+                " 
+                sizes="(min-width: 600px) 30vw, 75vw"
+                src="./Images/209453912-900.webp"
+                alt="Ilustration DevOps" class=" img-fluid illu" width="900" height="907">
                 <a class="liens" href="http://www.freepik.com">Designed by vectorjuice / Freepik</a>
             </div>
             <div>
@@ -218,7 +229,7 @@
                         <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.6667 83.4457C14.375 83.4457 12.4139 82.6304 10.7833 80.9999C9.15277 79.3693 8.33611 77.4068 8.33333 75.1124V25.1124C8.33333 22.8207 9.15 20.8596 10.7833 19.2291C12.4167 17.5985 14.3778 16.7818 16.6667 16.7791H83.3333C85.625 16.7791 87.5875 17.5957 89.2208 19.2291C90.8542 20.8624 91.6694 22.8235 91.6667 25.1124V75.1124C91.6667 77.404 90.8514 79.3666 89.2208 80.9999C87.5903 82.6332 85.6278 83.4485 83.3333 83.4457H16.6667ZM50 54.2791L83.3333 33.4457V25.1124L50 45.9457L16.6667 25.1124V33.4457L50 54.2791Z" fill="black"/>
                         </svg>
-                        <a class="liens" href="mailto:mateo.nicoud@gmail.com" aria-label="liens vers email">mateo.nicoud@gmail.com</a>
+                        <a class="liens" href="mailto:mateo.nicoud@gmail.com">mateo.nicoud@gmail.com</a>
                     </div>
                     <div class="col-12 col-md-6 d-flex gap flex-column flex-lg-row align-items-center">
                         <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +255,7 @@
                             <path d="M90.625 2.45617H9.375C7.53149 2.43741 5.75583 3.15074 4.43765 4.43963C3.11946 5.72853 2.36642 7.48771 2.34375 9.33117V90.9093C2.37051 92.75 3.12536 94.5052 4.4431 95.7907C5.76084 97.0763 7.53416 97.7875 9.375 97.7687H90.625C92.4686 97.7833 94.2431 97.0675 95.5606 95.7778C96.8781 94.4882 97.6315 92.7294 97.6562 90.8859V9.30773C97.6234 7.46968 96.8663 5.71888 95.5497 4.4359C94.2331 3.15293 92.4633 2.44147 90.625 2.45617Z" fill="#0076B2"/>
                             <path d="M16.4531 38.1826H30.6016V83.7061H16.4531V38.1826ZM23.5313 15.5264C25.154 15.5264 26.7403 16.0077 28.0895 16.9094C29.4386 17.8111 30.4901 19.0927 31.1107 20.5921C31.7313 22.0915 31.8933 23.7413 31.5762 25.3327C31.259 26.9242 30.477 28.3858 29.329 29.5327C28.181 30.6797 26.7186 31.4603 25.1268 31.7759C23.535 32.0916 21.8854 31.928 20.3866 31.3059C18.8878 30.6839 17.6072 29.6312 16.7068 28.2812C15.8064 26.9312 15.3266 25.3444 15.3281 23.7217C15.3302 21.5474 16.1954 19.4629 17.7335 17.9262C19.2717 16.3895 21.357 15.5264 23.5313 15.5264ZM39.4766 38.1826H53.0391V44.4326H53.2266C55.1172 40.8545 59.7266 37.0811 66.6094 37.0811C80.9375 37.0498 83.5938 46.4795 83.5938 58.7061V83.7061H69.4453V61.5576C69.4453 56.2842 69.3516 49.4951 62.0938 49.4951C54.8359 49.4951 53.6016 55.2451 53.6016 61.2139V83.7061H39.4766V38.1826Z" fill="white"/>
                         </svg>
-                    <a class="liens" href="https://www.linkedin.com/in/matéo-nicoud/" aria-label="Profil linkedin">https://www.linkedin.com/in/matéo-nicoud/</a>
+                    <a class="liens" href="https://www.linkedin.com/in/matéo-nicoud/">https://www.linkedin.com/in/matéo-nicoud/</a>
                     </div>
                 </div>
             </div>
