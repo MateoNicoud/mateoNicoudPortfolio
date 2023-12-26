@@ -4,6 +4,8 @@ main,footer {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    font-family: Arial, sans-serif;
+
 }
 main{
     gap:100px;
@@ -21,6 +23,8 @@ header{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    font-family: Arial, sans-serif;
+
 }
 @media (min-width: 600px){
     header{
@@ -82,6 +86,10 @@ header{
     align-items: center;
     padding-top: 20px;
 }
+#logoCampus>h3{
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
 .photoMateo{
     border-radius: 50px;
     width:200px;
@@ -113,9 +121,13 @@ header{
 #scroll{
     scroll-behavior:smooth;
 }
-p,footer{
-    text-align: justify;
+p{
     font-size: 20px;
+}
+@media (min-width: 600px){
+    p{
+        text-align: justify;
+    }
 }
 h3{
     font-size:40px;
