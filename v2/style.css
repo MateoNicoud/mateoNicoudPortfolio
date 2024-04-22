@@ -6,7 +6,7 @@
 .container {
     position: relative;
     width: 100%;
-    height: 110vh;
+    height: 130vh;
     overflow: hidden;
 }
 
@@ -17,6 +17,8 @@
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
 }
 
 .image1 {
@@ -70,8 +72,39 @@ main{
     width:200px;
     border:black solid 2px;
 }
-section {
-    display: flex;
-    flex-wrap: wrap;
+section{
+    background-color: #F47575;
 
+}
+section>div {
+    padding-top: 150px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    justify-items: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    grid-gap: 30px;
+}
+@media (min-width: 768px){
+    section>div{
+        grid-template-rows: 1fr 0;
+        grid-template-columns: 1fr 4fr;
+        .profilePic{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .aboutMe{
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .aboutMe>p{
+            margin-top: 60px;
+        }
+    }
+}
+.profilePic{
+    grid-row: 1;
+}
+.aboutMe{
+    grid-row: 2;
 }
