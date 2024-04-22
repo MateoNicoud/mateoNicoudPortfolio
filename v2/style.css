@@ -6,7 +6,7 @@
 .container {
     position: relative;
     width: 100%;
-    height: 110vh;
+    height: 130vh;
     overflow: hidden;
 }
 
@@ -17,7 +17,8 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: bottom;
 }
 
 .image1 {
@@ -72,7 +73,19 @@ main{
     border:black solid 2px;
 }
 section {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    justify-items: center;
 
+}
+@media (min-width: 768px){
+    section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.profilePic{
+    grid-column: 1;
+}
+.aboutMe{
+    grid-column: 2;
 }
