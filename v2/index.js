@@ -1,6 +1,7 @@
 /**
  *
  * @param {HTMLElement} element
+ * @param acc
  * @return {number}
  */
 function offsetTop(element, acc = 0) {
@@ -65,3 +66,22 @@ class Parallax {
 }
 
 Parallax.bind();
+//--------------------------------------------------------------------------------------------------------------------------
+
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+        card.classList.toggle('flipped');
+    });
+});
+
+$(document).ready(function(){
+    $('.').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+    });
+});
+//--------------------------------------------------------------------------------------------------------------------------
