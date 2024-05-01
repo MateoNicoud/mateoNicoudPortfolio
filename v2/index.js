@@ -75,6 +75,13 @@ cards.forEach(function(card) {
     card.addEventListener('click', function() {
         card.classList.toggle('flipped');
     });
+
+    const linksInCard = card.querySelectorAll('a');
+    linksInCard.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    });
 });
 
 $(document).ready(function(){

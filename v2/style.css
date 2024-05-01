@@ -152,8 +152,15 @@ main{
     margin: 0;
     display: grid;
     gap :40px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+@media (min-width: 1200px) {
+    .carrousel {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .containerCarrousel {
@@ -199,9 +206,30 @@ main{
 
 .card .back {
     transform: rotateY(180deg);
+
+}
+.card .back span{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .card.flipped {
     transform: rotateY(180deg);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }
 /*---------------------*/
