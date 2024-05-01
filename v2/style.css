@@ -54,6 +54,30 @@
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_front_fc.png');
     z-index: 8;
 }
+/*---------------------*/
+#pdf{
+    background-color: #F47575;
+    font-size: 24px;
+    border-radius: 33px;
+    position:absolute;
+    left: 50%;
+    top: 125vh;
+    transform: translateX(-50%);
+    border-color:#d8f0f2;
+    border-width: 3px;
+    border-style: solid;
+    padding: 0px 20px;
+    width: fit-content;
+    z-index: 14;
+}
+#pdf:hover {
+    background-color: #f76767;
+}
+.pdf{
+    text-decoration: none;
+    color:black;
+}
+/* */
 main{
     margin-bottom: 5000px;
 }
@@ -72,11 +96,11 @@ main{
     width:200px;
     border:black solid 2px;
 }
-section{
+#presentation{
     background-color: #F47575;
 
 }
-section>div {
+#presentation>div {
     padding-top: 150px;
     display: grid;
     grid-template-rows: 1fr 1fr ;
@@ -86,7 +110,7 @@ section>div {
     grid-gap: 30px;
 }
 @media (min-width: 768px){
-    section>div{
+    #presentation>div{
         grid-template-rows: 1fr 0;
         grid-template-columns: 1fr 4fr;
         .profilePic{
@@ -108,3 +132,104 @@ section>div {
 .aboutMe{
     grid-row: 2;
 }
+
+
+/*---------------------*/
+#logoCampus{
+    border-bottom:solid black 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+#logoCampus>h3{
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
+.carrousel{
+    height: 100%;
+    margin: 0;
+    display: grid;
+    gap :40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+@media (min-width: 1200px) {
+    .carrousel {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.containerCarrousel {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    perspective: 800px;
+    border-radius: 4px;
+    transition: transform 0.5s;
+}
+.containerCarrousel:hover{
+    transform: translateY(-10px);
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #47525D;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+
+}
+.card .back span{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+/*---------------------*/
