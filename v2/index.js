@@ -66,6 +66,50 @@ class Parallax {
 }
 
 Parallax.bind();
+
+
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var image = document.getElementById('scrollDown');
+
+    image.style.opacity = 1 - scrollPosition / 600;
+});
+//--------------------------------------------------------------------------------------------------------------------------
+
+
+const pElements = document.querySelectorAll('.aboutMe p, #me p');
+const h3Elements = document.querySelectorAll('.aboutMe h3, #me h3');
+
+pElements.forEach((element) => {
+    element.classList.add('hidden', 'delayed');
+});
+
+h3Elements.forEach((element) => {
+    element.classList.add('hidden');
+});
+
+function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-up');
+            entry.target.classList.remove('hidden');
+        }
+    });
+}
+
+const pObserver = new IntersectionObserver(handleIntersection);
+const h3Observer = new IntersectionObserver(handleIntersection);
+
+pElements.forEach((element) => {
+    pObserver.observe(element);
+});
+
+h3Elements.forEach((element) => {
+    h3Observer.observe(element);
+});
+
+
+
 //--------------------------------------------------------------------------------------------------------------------------
 
 

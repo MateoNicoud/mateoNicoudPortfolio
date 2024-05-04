@@ -1,8 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*// <uniquifier>: Use a unique and descriptive class name*/
+/*// <weight>: Use a value from 400 to 700*/
+
+.pixelify-sans-text {
+                    font-family: "Pixelify Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+
 h1, h2 {
     position: absolute;
     z-index: 12;
@@ -39,6 +50,20 @@ h2 {
         font-size: 100px;
     }
 }
+.animate-up {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 3s, opacity 3s;
+}
+
+.hidden {
+    transform: translateY(100px);
+    opacity: 0;
+}
+.delayed {
+    transition-delay: 0.5s;
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -66,56 +91,79 @@ h2 {
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/far_mountains_fc.png');
     z-index: 2;
 }
+
 .image3 {
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/grassy_mountains_fc.png');
     z-index: 3;
 }
+
 .image4 {
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_mid_t_fc.png');
     z-index: 4;
 }
+
 .image5 {
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_mid_fc.png');
     z-index: 5;
 }
+
 .image6 {
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/hill.png');
     z-index: 6;
 }
+
 .image7 {
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_front_t_fc.png');
     z-index: 7;
 }
+
 .image8 {
     background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_front_fc.png');
     z-index: 8;
 }
+
 /*---------------------*/
-#pdf{
+#pdf {
     background-color: #F47575;
     font-size: 24px;
     border-radius: 33px;
-    position:absolute;
+    position: absolute;
     left: 50%;
     top: 125vh;
     transform: translateX(-50%);
-    border-color:#d8f0f2;
+    border-color: #d8f0f2;
     border-width: 3px;
     border-style: solid;
     padding: 0px 20px;
     width: fit-content;
     z-index: 14;
+    display: flex;
+
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
+@media (min-width: 1200px) {
+    #pdf {
+        flex-direction: row;
+
+        justify-content: center;
+    }
+}
+
 #pdf:hover {
     background-color: #f76767;
 }
-.pdf{
+
+.pdf {
     text-decoration: none;
-    color:black;
+    color: black;
 }
+
 /* */
-main{
+main {
 }
+
 /*body::after{*/
 /*    content: '';*/
 /*    height: 2px;*/
@@ -138,6 +186,8 @@ main{
     display: grid;
     background-image: url('../Images/matéGrand.png');
     background-size: 180vh;
+    overflow: hidden;
+
 }
 
 .aboutMe {
@@ -174,10 +224,12 @@ main{
         margin-top: 6%;
         display: block;
     }
+
     .aboutMe p {
         font-size: 18px;
         margin-top: 80px;
     }
+
     .aboutMe h3 {
         font-size: 28px;
     }
@@ -193,6 +245,7 @@ main{
         margin-top: 3%;
         display: block;
     }
+
     .aboutMe > h3 {
         font-size: 50px;
     }
@@ -218,35 +271,48 @@ main{
 
 
 /*---------------------*/
-#logoCampus{
-    border-bottom:solid black 1px;
+#logoCampus {
+    border-bottom: solid black 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
 }
-#logoCampus>h3{
+
+#logoCampus > h3 {
     padding-bottom: 70px;
     padding-top: 50px;
 }
-.skillCard{
+#skills{
+    background-color: #e0e0e0;
+}
+
+.mySkills {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: xxx-large;
+}
+
+.skillCard {
     height: 100%;
     margin: 0;
     display: grid;
-    gap :40px;
+    gap: 40px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     margin-left: 12.5%;
     margin-right: 12.5%;
 }
+
 @media (min-width: 1200px) {
     .skillCard {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-#scrollDown{
+#scrollDown {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -262,7 +328,8 @@ main{
     border-radius: 4px;
     transition: transform 0.5s;
 }
-.containerCard:hover{
+
+.containerCard:hover {
     transform: translateY(-10px);
 }
 
@@ -299,7 +366,8 @@ main{
     transform: rotateY(180deg);
 
 }
-.card .back span{
+
+.card .back span {
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -323,33 +391,144 @@ main{
 .button:hover {
     background-color: #0056b3;
 }
-/*---------------------*/
 
-footer {
+.languages {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
     margin-left: 12.5%;
     margin-right: 12.5%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 120px;
+    gap: 30px;
+    padding-bottom: 150px;
+}
+@media (min-width: 1000px) {
+    .languages {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+        gap: 0;
+    }
+}
+
+.languages div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diplome {
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.diplome:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+.ldiplome{
+    text-decoration: none;
+    color: white;
+
+}
+
+
+/*---------------------*/
+#me {
+    background-color: #343434;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    overflow: hidden;
+
+}
+#me div{
+    margin-left: 12.5% ;
+    margin-right: 12.5% ;
+}
+#me div h3{
+    color: white;
+    text-shadow: black 2px 2px 2px;
+    padding-bottom: 100px;
+    font-size: 36px;
+}
+#me div p{
+    color: white;
+    text-shadow: black 2px 2px 2px;
+    padding-bottom: 50px;
+    font-size: 18px;
+}
+
+/*---------------------*/
+
+
+footer {
+    background-color: #e0e0e0;
+
+padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     font-family: Arial, sans-serif;
-    gap:10px;
-    padding-bottom:80px;
+    gap: 10px;
+    padding-bottom: 80px;
 
 }
+#footer-title {
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    border-bottom: black 1px solid;
+    padding-bottom: 20px;
+    margin-bottom: 90px;
+}
 .liens {
-    color: #0060B6;
+    color: black;
     text-decoration: none;
 }
 
-.liens:hover {
-    color:#00A0C6;
-    text-decoration:none;
-    cursor:pointer;
+.footer-grid div div a{
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
 }
+
+.footer-grid div div a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
 .footer-grid {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -357,8 +536,15 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 }
-.footer-grid .text {
-    text-align: center;
+
+.footer-grid div div a {
+display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+    color: black;
+
 }
 
 @media (min-width: 768px) {
