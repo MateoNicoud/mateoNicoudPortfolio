@@ -88,7 +88,7 @@ h2 {
 }
 
 .image1 {
-    background-image: url('/var/www/mateoNicoudPortfolio/Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/sky_fc.png');
+    background-image: url('../Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/sky_fc.png');
     z-index: 1;
 }
 
