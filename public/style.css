@@ -215,7 +215,6 @@ main {
     margin-right: 12.5%;
 }
 
-/* Media Queries */
 @media (min-width: 800px) {
     #presentation {
         background-image: url('../Images/mateGrand.webp');
@@ -386,7 +385,7 @@ main {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #0056b3;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -436,8 +435,8 @@ main {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: black;
-    background-color: #007BFF;
+    color: #fff;
+    background-color: #0071EB;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -452,10 +451,11 @@ main {
     cursor: pointer;
     color: #fff;
 }
-.ldiplome{
-    text-decoration: none;
-    color: white;
 
+.ldiplome, .ldiplome span {
+    text-decoration: none;
+
+    color: #fff;
 }
 
 
