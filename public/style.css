@@ -189,7 +189,7 @@ main {
     background-repeat: no-repeat;
     height: 80vh;
     display: grid;
-    background-image: url('../Images/matéGrand.png');
+    background-image: url('../Images/matéoGrand.svg');
     background-size: 180vh;
     overflow: hidden;
     text-align: justify;
