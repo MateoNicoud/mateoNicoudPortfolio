@@ -189,8 +189,8 @@ main {
     background-repeat: no-repeat;
     height: 80vh;
     display: grid;
-    background-image: url('../Images/matéoGrand.svg');
-    background-size: 180vh;
+    background-image: url('../Images/mateGrand.webp');
+    background-size: 68vh;
     overflow: hidden;
     text-align: justify;
 
@@ -218,9 +218,9 @@ main {
 /* Media Queries */
 @media (min-width: 800px) {
     #presentation {
-        background-image: url('../Images/matéoGrand.svg');
+        background-image: url('../Images/mateGrand.webp');
         height: 70vh;
-        background-size: 190vh;
+        background-size: 65vh;
 
 
         margin-top: 0;
@@ -243,7 +243,7 @@ main {
 
 @media (min-width: 1200px) {
     #presentation {
-        background-image: url('../Images/matéoGrand.svg');
+        background-image: url('../Images/mateGrand.webp');
         height: 70vh;
     }
 
@@ -265,7 +265,7 @@ main {
 
 @media (min-width: 1500px) {
     #presentation {
-        background-image: url('../Images/matéoGrand.svg');
+        background-image: url('../Images/mateGrand.webp');
         height: 70vh;
     }
 
